@@ -1,0 +1,29 @@
+
+spring:
+  thymeleaf:
+    cache: false
+    enabled: true
+    encoding: UTF-8
+    
+  messages:
+    basename: "i18n/messages"
+    cache-duration: -1
+    encoding: UTF-8
+    
+  datasource:    url: "jdbc:mysql://localhost/spring-demo_session"
+    username: "spring-demo"
+    password: "spring-demo" 
+    hikari:
+      data-source-properties:
+        useSSL:         false
+        serverTimezone: "JST"
+
+  jackson:    date-format: "yyyy-MM-dd'T'HH:mm:ss"
+    serialization:      write-dates-as-timestamps: false
+
+  session:
+    store-type: jdbc
+    
+logging:  level:
+    root: OFF    com.example: DEBUG
+    org.springframework: INFO
